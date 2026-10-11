@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Mostafa - Portfolio</title>
+    <style>
+      :root {
+        --bg-color: #0f172a;
+        --text-color: #f8fafc;
+        --accent-color: #38bdf8;
+        --secondary-color: #334155;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row; /* تم التعديل لعرض العناصر بالترتيب الطبيعي */
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        width: 90%;
+        background: var(--secondary-color);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .text-section {
+        flex: 1;
+        padding-left: 40px; /* تم تغييرها إلى اليسار لعمل مسافة ممتازة بين النص والصورة */
+      }
+
+      .image-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .profile-img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--accent-color);
+        box-shadow: 0 0 20px var(--accent-color);
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: var(--accent-color);
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .highlight {
+        color: var(--accent-color);
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column-reverse; /* تم التعديل لتظهر الصورة في الأعلى أولاً ثم النص بالأسفل عند تصفح الهاتف */
+          text-align: center;
+        }
+
+        .text-section {
+          padding-left: 0; /* تصغير المسافة على الهواتف */
+          margin-top: 30px;
+        }
+
+        .profile-img {
+          width: 200px;
+          height: 200px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- تم تغيير ترتيب الـ Divs داخل الكود ليتناسب مع الـ Flexbox العادي وتظهر الصورة يميناً -->
+      <div class="text-section">
+        <h1>Hello! I am Mohamed Mostafa</h1>
+        <p>
+          I am an <span class="highlight">18-year-old</span> student at the
+          Faculty of Computer Science and Information Technology, Modern Academy
+          in Maadi.
+        </p>
+        <p>
+          I have a strong passion for programming and a clear goal to specialize
+          in <span class="highlight">Cybersecurity</span> and
+          <span class="highlight">Web Development</span> in the future.
+        </p>
+      </div>
+      <div class="image-section">
+        <img src="mohamedd.jpg" alt="Mohamed Mostafa" class="profile-img" />
+      </div>
+    </div>
+  </body>
+</html>
